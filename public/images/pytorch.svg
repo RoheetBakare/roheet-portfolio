@@ -1,0 +1,15 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="98" fill="#0d1117" stroke="#5eead4" stroke-width="2"/>
+  <!-- PyTorch flame shape -->
+  <!-- Outer flame -->
+  <path d="M100 40 C100 40 118 58 122 76 C126 92 118 102 118 102 C118 102 128 90 126 74 C136 86 138 102 132 116 C126 130 112 140 100 140 C88 140 74 130 68 116 C62 102 64 86 74 74 C72 90 82 102 82 102 C82 102 74 92 78 76 C82 58 100 40 100 40Z" fill="#5eead4" opacity="0.2" stroke="#5eead4" stroke-width="1.5"/>
+  <!-- Inner flame -->
+  <path d="M100 65 C100 65 110 76 112 86 C114 95 108 102 108 102 C108 102 115 94 113 84 C118 90 119 100 114 109 C109 118 104 122 100 122 C96 122 91 118 86 109 C81 100 82 90 87 84 C85 94 92 102 92 102 C92 102 86 95 88 86 C90 76 100 65 100 65Z" fill="#5eead4" opacity="0.6"/>
+  <!-- Center dot (coal) -->
+  <circle cx="100" cy="108" r="7" fill="#5eead4"/>
+  <circle cx="100" cy="108" r="3" fill="#0d1117"/>
+  <!-- Label -->
+  <text x="100" y="155" fill="#eae5ec" font-size="13" text-anchor="middle" font-family="monospace" font-weight="bold" letter-spacing="1">PyTorch</text>
+  <text x="100" y="172" fill="#5eead4" font-size="11" text-anchor="middle" font-family="monospace" opacity="0.7">Neural Networks</text>
+  <text x="100" y="190" fill="#5eead4" font-size="11" text-anchor="middle" font-family="monospace" letter-spacing="2" opacity="0.5">PT</text>
+</svg>

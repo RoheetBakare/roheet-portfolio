@@ -1,0 +1,22 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="98" fill="#0d1117" stroke="#5eead4" stroke-width="2"/>
+  <!-- TensorFlow T-shape logo simplified -->
+  <!-- Outer hexagon -->
+  <polygon points="100,42 134,61 134,99 100,118 66,99 66,61" stroke="#5eead4" stroke-width="2.5" fill="none"/>
+  <!-- Inner hexagon -->
+  <polygon points="100,60 118,70 118,90 100,100 82,90 82,70" stroke="#5eead4" stroke-width="1.5" fill="#5eead4" opacity="0.15"/>
+  <!-- T-shape in center -->
+  <rect x="84" y="64" width="32" height="6" rx="1" fill="#5eead4"/>
+  <rect x="97" y="70" width="6" height="26" rx="1" fill="#5eead4"/>
+  <!-- Connecting lines to outer ring -->
+  <line x1="100" y1="42" x2="100" y2="60" stroke="#5eead4" stroke-width="1.5" opacity="0.5"/>
+  <line x1="134" y1="61" x2="118" y2="70" stroke="#5eead4" stroke-width="1.5" opacity="0.5"/>
+  <line x1="134" y1="99" x2="118" y2="90" stroke="#5eead4" stroke-width="1.5" opacity="0.5"/>
+  <line x1="100" y1="118" x2="100" y2="100" stroke="#5eead4" stroke-width="1.5" opacity="0.5"/>
+  <line x1="66" y1="99" x2="82" y2="90" stroke="#5eead4" stroke-width="1.5" opacity="0.5"/>
+  <line x1="66" y1="61" x2="82" y2="70" stroke="#5eead4" stroke-width="1.5" opacity="0.5"/>
+  <!-- Label -->
+  <text x="100" y="145" fill="#eae5ec" font-size="13" text-anchor="middle" font-family="monospace" font-weight="bold" letter-spacing="1">TensorFlow</text>
+  <text x="100" y="163" fill="#5eead4" font-size="11" text-anchor="middle" font-family="monospace" opacity="0.7">Deep Learning</text>
+  <text x="100" y="185" fill="#5eead4" font-size="11" text-anchor="middle" font-family="monospace" letter-spacing="2" opacity="0.5">TF</text>
+</svg>

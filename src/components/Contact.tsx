@@ -33,6 +33,12 @@ const Contact = () => {
             </p>
           </div>
           <div className="contact-box">
+            <h4>Certifications</h4>
+            <p>NLP Specialization — deeplearning.ai</p>
+            <p>Deep Learning Specialization — deeplearning.ai</p>
+            <p>AWS Cloud Practitioner — Amazon Web Services</p>
+          </div>
+          <div className="contact-box">
             <h4>Social</h4>
             <a
               href="https://github.com/roheetbakare"

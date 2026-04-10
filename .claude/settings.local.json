@@ -3,7 +3,10 @@
     "allow": [
       "Bash(gh auth:*)",
       "Bash(gh api:*)",
-      "Bash(npx vercel:*)"
+      "Bash(npx vercel:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m ':*)",
+      "Bash(git push:*)"
     ]
   }
 }
