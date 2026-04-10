@@ -88,11 +88,11 @@ const WhatIDo = () => {
 
             <div className="what-content-in">
               <h3>DATA SCIENCE &amp; ML</h3>
-              <h4>Machine Learning at Scale</h4>
+              <h4>End-to-End ML Systems</h4>
               <p>
-                ML specialist building predictive models and analytics pipelines
-                that turn raw data into actionable decisions—across healthcare,
-                finance, and education sectors.
+                7+ years building production ML systems—predictive models, NLP
+                pipelines, and analytics that drive measurable outcomes across
+                healthcare, finance, and education.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">

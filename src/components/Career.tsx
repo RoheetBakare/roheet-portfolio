@@ -34,7 +34,7 @@ const Career = () => {
                 <h4>Data Engineer</h4>
                 <h5>Coders Data LLC · Whittier, CA</h5>
               </div>
-              <h3>2024</h3>
+              <h3>2024–25</h3>
             </div>
             <p>
               Optimized ETL workflows with SQL, cutting processing time by 30%.
@@ -71,6 +71,21 @@ const Career = () => {
               engagement growth and 70% customer retention. Developed cloud-based
               ML solutions on AWS and GCP. Delivered cross-functional roadmaps
               with PowerBI and Tableau, boosting operational efficiency by 40%.
+            </p>
+          </div>
+          <div className="career-info-box">
+            <div className="career-info-in">
+              <div className="career-role">
+                <h4>Data Scientist</h4>
+                <h5>Skillovate Learning Pvt Ltd · Pune, IN</h5>
+              </div>
+              <h3>2018–20</h3>
+            </div>
+            <p>
+              Drove 25% market share increase through advanced data mining and
+              statistical analysis. Built a real-time KPI dashboard with AWS
+              Lambda and S3, cutting decision-making response time by 30%.
+              Applied predictive modeling to reduce customer churn by 35% in Q1.
             </p>
           </div>
         </div>

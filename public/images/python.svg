@@ -1,0 +1,16 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="98" fill="#0d1117" stroke="#5eead4" stroke-width="2"/>
+  <!-- Python dual-snake body shapes -->
+  <!-- Blue snake (top) -->
+  <path d="M100 45 C75 45 60 57 60 72 L60 90 C60 97 65 102 72 102 L100 102 C109 102 116 108 116 117 L116 128 C116 143 101 155 76 155 C72 155 68 154 65 153" stroke="#5eead4" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Yellow snake (bottom) -->
+  <path d="M100 155 C125 155 140 143 140 128 L140 110 C140 103 135 98 128 98 L100 98 C91 98 84 92 84 83 L84 72 C84 57 99 45 124 45 C128 45 132 46 135 47" stroke="#eae5ec" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Head circles -->
+  <circle cx="70" cy="50" r="8" fill="#5eead4"/>
+  <circle cx="130" cy="150" r="8" fill="#eae5ec"/>
+  <!-- Eyes -->
+  <circle cx="70" cy="50" r="2.5" fill="#0d1117"/>
+  <circle cx="130" cy="150" r="2.5" fill="#0d1117"/>
+  <!-- Label -->
+  <text x="100" y="185" fill="#5eead4" font-size="14" text-anchor="middle" font-family="monospace" font-weight="bold" letter-spacing="2">PYTHON</text>
+</svg>

@@ -13,14 +13,14 @@ import {
 
 const textureLoader = new THREE.TextureLoader();
 const imageUrls = [
-  "/images/react2.webp",
-  "/images/next2.webp",
-  "/images/node2.webp",
-  "/images/express.webp",
-  "/images/mongo.webp",
-  "/images/mysql.webp",
-  "/images/typescript.webp",
-  "/images/javascript.webp",
+  "/images/python.svg",
+  "/images/tensorflow.svg",
+  "/images/pytorch.svg",
+  "/images/aws.svg",
+  "/images/docker.svg",
+  "/images/tableau.svg",
+  "/images/spark.svg",
+  "/images/sklearn.svg",
 ];
 const textures = imageUrls.map((url) => textureLoader.load(url));
 
@@ -128,29 +128,16 @@ const TechStack = () => {
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY || document.documentElement.scrollTop;
-      const threshold = document
-        .getElementById("work")!
-        .getBoundingClientRect().top;
-      setIsActive(scrollY > threshold);
-    };
-    document.querySelectorAll(".header a").forEach((elem) => {
-      const element = elem as HTMLAnchorElement;
-      element.addEventListener("click", () => {
-        const interval = setInterval(() => {
-          handleScroll();
-        }, 10);
-        setTimeout(() => {
-          clearInterval(interval);
-        }, 1000);
-      });
-    });
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    const section = document.querySelector(".techstack") as Element;
+    if (!section) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsActive(entry.isIntersecting),
+      { threshold: 0.2 }
+    );
+    observer.observe(section);
+    return () => observer.disconnect();
   }, []);
+
   const materials = useMemo(() => {
     return textures.map(
       (texture) =>
@@ -168,7 +155,7 @@ const TechStack = () => {
 
   return (
     <div className="techstack">
-      <h2> My Techstack</h2>
+      <h2>My Tech Stack</h2>
 
       <Canvas
         shadows

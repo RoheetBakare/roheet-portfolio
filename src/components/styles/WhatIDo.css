@@ -63,7 +63,7 @@
   padding: 10px 50px;
 }
 .what-content h3 {
-  font-size: 35px;
+  font-size: 30px;
   letter-spacing: 1px;
   margin: 0;
 }
@@ -213,7 +213,7 @@
   opacity: 0.5;
   font-size: 12px;
   letter-spacing: 1px;
-  font-family: "Geist", sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   margin-bottom: 5px;
 }
 @keyframes whatBorders {
