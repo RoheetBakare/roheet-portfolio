@@ -116,3 +116,36 @@
     font-size: 13px;
   }
 }
+
+@media only screen and (max-width: 500px) {
+  .skills-section {
+    padding: 40px 0 50px;
+  }
+
+  .skills-header h2 {
+    font-size: 28px;
+    letter-spacing: 1px;
+  }
+
+  .skills-subtitle {
+    font-size: 12px;
+  }
+
+  .skills-rows {
+    gap: 10px;
+  }
+
+  .skill-pill {
+    padding: 8px 12px;
+    margin: 0 5px;
+    gap: 7px;
+  }
+
+  .skill-icon {
+    font-size: 13px;
+  }
+
+  .skill-name {
+    font-size: 12px;
+  }
+}
