@@ -337,3 +337,21 @@
     max-height: 250px;
   }
 }
+
+@media only screen and (max-width: 500px) {
+  .work-section h2 {
+    font-size: 30px;
+  }
+
+  .carousel-details h4 {
+    font-size: 17px;
+  }
+
+  .carousel-category {
+    font-size: 13px;
+  }
+
+  .carousel-description {
+    font-size: 13px;
+  }
+}
