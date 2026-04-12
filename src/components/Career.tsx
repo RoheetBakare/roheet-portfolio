@@ -22,10 +22,9 @@ const Career = () => {
             </div>
             <p>
               Built Tableau dashboards tracking service metrics for leadership,
-              improving delivery timeliness by 25%. Orchestrated data pipelines
-              with Apache Airflow, reducing turnaround time by 30%. Deployed
-              automated data integration pipelines in Python and SQL, cutting
-              manual entry by 75%.
+              cutting delivery delays by 25%. Orchestrated data pipelines with
+              Apache Airflow, reducing turnaround time by 30%. Automated data
+              integration in Python and SQL, eliminating 75% of manual data entry.
             </p>
           </div>
           <div className="career-info-box">
@@ -37,10 +36,10 @@ const Career = () => {
               <h3>2024–25</h3>
             </div>
             <p>
-              Optimized ETL workflows with SQL, cutting processing time by 30%.
-              Implemented ML algorithms for predictive modeling, increasing
-              revenue opportunity identification by 30%. Applied financial
-              modeling for strategic planning, improving profitability by 15%.
+              Architected NLP-powered client analytics workflows, cutting
+              manual reporting time by 60%. Standardized MLOps practices
+              across 4 client projects and optimized ETL pipelines, reducing
+              data processing time by 30%.
             </p>
           </div>
           <div className="career-info-box">
@@ -53,9 +52,9 @@ const Career = () => {
             </div>
             <p>
               Applied statistical modeling and ML to transportation data,
-              boosting shuttle on-time arrivals by 25%. Developed Tableau
-              visualizations increasing sales efficiency by 15% and leveraged
-              ML to cut operational costs by 20%.
+              improving shuttle on-time arrivals by 25%. Built Tableau
+              visualizations that raised sales team efficiency by 15% and
+              used predictive models to cut operational costs by 20%.
             </p>
           </div>
           <div className="career-info-box">
@@ -67,10 +66,10 @@ const Career = () => {
               <h3>2020–22</h3>
             </div>
             <p>
-              Led a team implementing product success metrics, driving 65%
-              engagement growth and 70% customer retention. Developed cloud-based
-              ML solutions on AWS and GCP. Delivered cross-functional roadmaps
-              with PowerBI and Tableau, boosting operational efficiency by 40%.
+              Led a 4-person data team delivering product success metrics that
+              drove 65% engagement growth and 70% customer retention. Built
+              cloud-based ML solutions on AWS and GCP. Delivered cross-functional
+              analytics roadmaps with PowerBI and Tableau, boosting efficiency 40%.
             </p>
           </div>
           <div className="career-info-box">
@@ -82,10 +81,10 @@ const Career = () => {
               <h3>2018–20</h3>
             </div>
             <p>
-              Drove 25% market share increase through advanced data mining and
-              statistical analysis. Built a real-time KPI dashboard with AWS
-              Lambda and S3, cutting decision-making response time by 30%.
-              Applied predictive modeling to reduce customer churn by 35% in Q1.
+              First data hire. Built the analytics stack from scratch—ETL,
+              dashboards, and a propensity model that cut churn 35% in Q1.
+              Delivered a real-time KPI dashboard on AWS Lambda and S3,
+              reducing decision response time by 30%.
             </p>
           </div>
         </div>

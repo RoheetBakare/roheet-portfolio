@@ -6,29 +6,37 @@ import { MdArrowBack, MdArrowForward } from "react-icons/md";
 const projects = [
   {
     title: "GTM Analytics Platform",
-    category: "End-to-End Product Data Analytics",
+    category: "End-to-End Go-to-Market Analytics Pipeline",
     tools: "dbt, Apache Airflow, Python, SQL, Tableau",
+    description:
+      "Unified CRM, ads, and web data into a single warehouse with automated dashboards—giving the marketing and sales teams one source of truth for revenue decisions.",
     image: "/images/gtm-analytics.svg",
     link: "#",
   },
   {
     title: "Parking Analytics",
-    category: "Interactive Forecasting Dashboard",
-    tools: "Machine Learning, Python, Tableau, Multi-source Data Integration",
+    category: "Real-Time Occupancy Detection System",
+    tools: "Computer Vision, Python, OpenCV, Tableau",
+    description:
+      "Computer vision system for real-time parking occupancy detection. Deployed on edge hardware with a live dashboard updating every 30 seconds.",
     image: "/images/parking-analytics.svg",
     link: "#",
   },
   {
     title: "Disease Predictor",
-    category: "Clinical Data Analysis Tool",
-    tools: "Random Forest, SVM, Python, Interactive Dashboards",
+    category: "Clinical Risk Classification Model",
+    tools: "BioBERT, Random Forest, Python, EHR API",
+    description:
+      "Multi-label classification model predicting patient risk from clinical notes using BioBERT fine-tuning. Integrated with an EHR API for real-time inference.",
     image: "/images/disease-predictor.svg",
     link: "#",
   },
   {
     title: "YouTube Summarizer",
-    category: "NLP Video Summarization Engine",
-    tools: "LSTM, BERT, Transformer, Recommendation Engine",
+    category: "LLM-Powered Video Summarization Tool",
+    tools: "LangChain, OpenAI, Streamlit, Python",
+    description:
+      "LLM-powered tool that extracts, chunks, and summarizes YouTube transcripts. Built with LangChain and OpenAI, deployed as a Streamlit app.",
     image: "/images/yt-summarizer.svg",
     link: "#",
   },
@@ -106,8 +114,9 @@ const Work = () => {
                         <p className="carousel-category">
                           {project.category}
                         </p>
+                        <p className="carousel-description">{project.description}</p>
                         <div className="carousel-tools">
-                          <span className="tools-label">Tools & Features</span>
+                          <span className="tools-label">Tools & Stack</span>
                           <p>{project.tools}</p>
                         </div>
                       </div>

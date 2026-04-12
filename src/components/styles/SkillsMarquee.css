@@ -1,0 +1,118 @@
+/* ── Skills Marquee Section ── */
+.skills-section {
+  position: relative;
+  z-index: 1;
+  background-color: #080c14;
+  padding: 80px 0 100px;
+  overflow: hidden;
+}
+
+.skills-section::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(ellipse at center, rgba(94, 234, 212, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ── Header ── */
+.skills-header {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.skills-header h2 {
+  font-size: 65px;
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.skills-subtitle {
+  font-size: 15px;
+  font-weight: 300;
+  color: #adacac;
+  margin: 12px 0 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ── Rows ── */
+.skills-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skills-row {
+  width: 100%;
+}
+
+/* ── Pill ── */
+.skill-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 10px;
+  padding: 12px 22px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 2px solid var(--accentColor);
+  border-radius: 6px;
+  cursor: default;
+  transition: background 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  white-space: nowrap;
+}
+
+.skill-pill:hover {
+  background: rgba(94, 234, 212, 0.07);
+  border-color: var(--accentColor);
+  box-shadow: 0 0 16px rgba(94, 234, 212, 0.15), inset 0 0 12px rgba(94, 234, 212, 0.04);
+}
+
+.skill-icon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.skill-name {
+  font-size: 14px;
+  font-weight: 400;
+  color: #eae5ec;
+  letter-spacing: 0.5px;
+}
+
+/* ── Responsive ── */
+@media only screen and (max-width: 900px) {
+  .skills-section {
+    padding: 50px 0 70px;
+  }
+
+  .skills-header h2 {
+    font-size: 36px;
+  }
+
+  .skills-rows {
+    gap: 14px;
+  }
+
+  .skill-pill {
+    padding: 10px 16px;
+    margin: 0 7px;
+  }
+
+  .skill-icon {
+    font-size: 15px;
+  }
+
+  .skill-name {
+    font-size: 13px;
+  }
+}
