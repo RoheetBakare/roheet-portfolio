@@ -6,12 +6,12 @@ const About = () => {
       <div className="about-me">
         <h3 className="title">About Me</h3>
         <p className="para">
-          I am a Data Scientist with 7+ years of experience building machine learning
-          models and predictive analytics solutions across technology, education,
-          healthcare, and finance. I enjoy translating complex data into decisions
-          that move the needle—from designing cloud-based ML pipelines and deploying
-          production models to building interactive dashboards that help teams act
-          faster and smarter.
+          I build machine learning systems that actually ship. With 7+ years across
+          healthcare, finance, and ed-tech, I've led teams from raw data exploration
+          through production deployment—designing NLP pipelines, predictive models,
+          and cloud-native ML infrastructure. I care about clarity: clean code,
+          explainable models, and dashboards that help non-technical stakeholders
+          make faster, better calls.
         </p>
       </div>
     </div>
