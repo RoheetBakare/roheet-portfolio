@@ -88,6 +88,14 @@
   font-size: 16px;
 }
 
+.carousel-description {
+  font-size: 14px;
+  font-weight: 300;
+  color: #c8c5cc;
+  margin: 10px 0 0;
+  line-height: 1.6;
+}
+
 .carousel-tools {
   margin-top: 16px;
 }
