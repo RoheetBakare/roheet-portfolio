@@ -36,12 +36,13 @@
 
 .carousel-track {
   display: flex;
+  width: 400%;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform;
 }
 
 .carousel-slide {
-  min-width: 100%;
+  width: 25%;
   flex-shrink: 0;
   box-sizing: border-box;
   padding: 50px 0;
@@ -208,8 +209,6 @@
 .work-image {
   display: flex;
   width: 100%;
-  min-width: 0;
-  overflow: hidden;
   justify-content: center;
 }
 

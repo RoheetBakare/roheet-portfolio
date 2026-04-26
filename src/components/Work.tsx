@@ -99,7 +99,7 @@ const Work = () => {
             <div
               className="carousel-track"
               style={{
-                transform: `translateX(-${currentIndex * 100}%)`,
+                transform: `translateX(-${currentIndex * 25}%)`,
               }}
             >
               {projects.map((project, index) => (
