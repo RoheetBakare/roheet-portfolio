@@ -31,7 +31,13 @@
   cursor: pointer;
   min-height: 44px;
   display: flex;
+  align-items: stretch;
+}
+
+.header ul li > a {
+  display: flex;
   align-items: center;
+  min-height: 44px;
 }
 .navbar-connect {
   position: absolute;
