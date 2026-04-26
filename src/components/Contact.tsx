@@ -11,35 +11,43 @@ const Contact = () => {
             <h4>Connect</h4>
             <p>
               <a
-                href="https://www.linkedin.com/in/roheetbakare/"
-                target="_blank"
-                rel="noreferrer"
-                data-cursor="disable"
-              >
-                LinkedIn — roheetbakare
-              </a>
-            </p>
-            <p>
-              <a
                 href="mailto:bakareroheet@gmail.com"
                 data-cursor="disable"
               >
                 bakareroheet@gmail.com
               </a>
             </p>
-            <h4>Education</h4>
             <p>
-              MS Statistics, California State University East Bay — 2022–2024
+              <a
+                href="https://www.linkedin.com/in/roheetbakare/"
+                target="_blank"
+                rel="noreferrer"
+                data-cursor="disable"
+              >
+                linkedin.com/in/roheetbakare
+              </a>
+            </p>
+            <p>
+              <a
+                href="https://github.com/roheetbakare"
+                target="_blank"
+                rel="noreferrer"
+                data-cursor="disable"
+              >
+                github.com/roheetbakare
+              </a>
             </p>
           </div>
           <div className="contact-box">
+            <h4>Education</h4>
+            <p>MS Statistics<br />California State University East Bay · 2022–2024</p>
             <h4>Certifications</h4>
             <p>NLP Specialization — deeplearning.ai</p>
             <p>Deep Learning Specialization — deeplearning.ai</p>
             <p>AWS Cloud Practitioner — Amazon Web Services</p>
           </div>
           <div className="contact-box">
-            <h4>Social</h4>
+            <h4>Profiles</h4>
             <a
               href="https://github.com/roheetbakare"
               target="_blank"

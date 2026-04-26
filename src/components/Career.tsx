@@ -18,7 +18,7 @@ const Career = () => {
                 <h4>Senior Data Scientist</h4>
                 <h5>Add-on Support Services · San Jose, CA</h5>
               </div>
-              <h3>2025–26</h3>
+              <h3>2025–Present</h3>
             </div>
             <p>
               Built Tableau dashboards tracking service metrics for leadership,

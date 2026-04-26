@@ -7,11 +7,11 @@ const About = () => {
         <h3 className="title">About Me</h3>
         <p className="para">
           I build machine learning systems that actually ship. With 7+ years across
-          healthcare, finance, and ed-tech, I've led teams from raw data exploration
-          through production deployment—designing NLP pipelines, predictive models,
-          and cloud-native ML infrastructure. I care about clarity: clean code,
-          explainable models, and dashboards that help non-technical stakeholders
-          make faster, better calls.
+          ed-tech, data consulting, and academic research, I've led teams from raw
+          data exploration through production deployment—designing NLP pipelines,
+          predictive models, and cloud-native ML infrastructure. I care about
+          precision: clean pipelines, explainable models, and dashboards that give
+          non-technical stakeholders the confidence to move faster.
         </p>
       </div>
     </div>
