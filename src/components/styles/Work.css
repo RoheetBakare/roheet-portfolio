@@ -184,6 +184,13 @@
   cursor: pointer;
   transition: all 0.3s ease;
   padding: 0;
+  position: relative;
+}
+
+.carousel-dot::before {
+  content: '';
+  position: absolute;
+  inset: -17px;
 }
 
 .carousel-dot:hover {
