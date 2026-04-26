@@ -51,6 +51,17 @@ const Scene = () => {
 
       const light = setLighting(scene);
       let progress = setProgress((value) => setLoading(value));
+
+      // Bail out cleanly if WebGL is not supported on this device.
+      // progress.clear() completes the loading bar → the loading screen
+      // resolves normally and the site renders without the 3D character.
+      const testCanvas = document.createElement("canvas");
+      if (!testCanvas.getContext("webgl2") && !testCanvas.getContext("webgl")) {
+        progress.clear();
+        renderer.dispose();
+        return;
+      }
+
       const { loadCharacter } = setCharacter(renderer, scene, camera);
 
       loadCharacter().then((gltf) => {
