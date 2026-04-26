@@ -48,7 +48,6 @@ const row4: Skill[] = [
 
 const SkillPill = ({ skill }: { skill: Skill }) => (
   <div className="skill-pill">
-    <span className="skill-icon">{skill.icon}</span>
     <span className="skill-name">{skill.name}</span>
   </div>
 );

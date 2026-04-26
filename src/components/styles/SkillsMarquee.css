@@ -64,7 +64,6 @@
   padding: 12px 22px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-left: 2px solid var(--accentColor);
   border-radius: 6px;
   cursor: default;
   transition: background 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
@@ -75,11 +74,6 @@
   background: rgba(94, 234, 212, 0.07);
   border-color: var(--accentColor);
   box-shadow: 0 0 16px rgba(94, 234, 212, 0.15), inset 0 0 12px rgba(94, 234, 212, 0.04);
-}
-
-.skill-icon {
-  font-size: 18px;
-  line-height: 1;
 }
 
 .skill-name {
@@ -106,10 +100,6 @@
   .skill-pill {
     padding: 10px 16px;
     margin: 0 7px;
-  }
-
-  .skill-icon {
-    font-size: 15px;
   }
 
   .skill-name {
@@ -139,10 +129,6 @@
     padding: 8px 12px;
     margin: 0 5px;
     gap: 7px;
-  }
-
-  .skill-icon {
-    font-size: 13px;
   }
 
   .skill-name {
