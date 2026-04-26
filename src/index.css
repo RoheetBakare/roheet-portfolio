@@ -39,6 +39,10 @@ a {
   text-decoration: inherit;
 }
 
+a:visited {
+  color: #a89bae;
+}
+
 a:hover {
   color: var(--accentColor);
 }
