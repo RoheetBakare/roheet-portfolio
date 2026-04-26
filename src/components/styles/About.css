@@ -13,12 +13,12 @@
   padding: 50px 0px;
   padding-bottom: 0;
   width: 500px;
-  max-width: calc(100% - 15px);
+  max-width: calc(100% - 25px);
 }
 .about-me h3 {
   font-size: 25px;
   text-transform: uppercase;
-  letter-spacing: 7px;
+  letter-spacing: 4px;
   font-weight: 400;
   color: var(--accentColor);
 }
