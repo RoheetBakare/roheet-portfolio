@@ -28,3 +28,5 @@ backup/
 .env
 ._*
 .vercel
+.gstack/
+.gstack-design-review/
