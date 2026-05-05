@@ -25,9 +25,13 @@ const Landing = ({ children }: PropsWithChildren) => {
               <div className="landing-h2-info-1">ML Engineer</div>
             </h2>
             <a
-              href="mailto:bakareroheet@gmail.com"
+              href="#contact"
               className="landing-cta"
               data-cursor="disable"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+              }}
             >
               Get in Touch
             </a>
