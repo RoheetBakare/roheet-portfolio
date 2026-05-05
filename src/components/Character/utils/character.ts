@@ -3,6 +3,42 @@ import { DRACOLoader, GLTF, GLTFLoader } from "three-stdlib";
 import { setCharTimeline, setAllTimeline } from "../../utils/GsapScroll";
 import { decryptFile } from "./decrypt";
 
+
+const loadGlasses = (headBone: THREE.Object3D, character: THREE.Object3D) => {
+  if ((headBone as any).__glassesLoading) return;
+  (headBone as any).__glassesLoading = true;
+
+  const glassesLoader = new GLTFLoader();
+  const glassesDraco = new DRACOLoader();
+  glassesDraco.setDecoderPath("/draco/");
+  glassesLoader.setDRACOLoader(glassesDraco);
+
+  glassesLoader.load(
+    "/models/glasses.glb",
+    (glassesGltf) => {
+      const glasses = glassesGltf.scene;
+      const eyebrowL = character.getObjectByName("eyebrow_L");
+      const eyebrowR = character.getObjectByName("eyebrow_R");
+      if (eyebrowL && eyebrowR) {
+        const posL = new THREE.Vector3();
+        const posR = new THREE.Vector3();
+        eyebrowL.getWorldPosition(posL);
+        eyebrowR.getWorldPosition(posR);
+        const midpoint = posL.clone().add(posR).multiplyScalar(0.5);
+        midpoint.y -= 0.3;
+        headBone.worldToLocal(midpoint);
+        glasses.position.copy(midpoint);
+      }
+      glasses.scale.set(1, 1, 1);
+      glasses.rotation.set(0, 0, 0);
+      headBone.add(glasses);
+      glassesDraco.dispose();
+    },
+    undefined,
+    (error) => { if (import.meta.env.DEV) console.error("Glasses load error:", error); }
+  );
+};
+
 const setCharacter = (
   renderer: THREE.WebGLRenderer,
   scene: THREE.Scene,
@@ -28,18 +64,54 @@ const setCharacter = (
           async (gltf) => {
             character = gltf.scene;
             await renderer.compileAsync(character, camera, scene);
+            const SKIN_MESHES = new Set(["Face002", "Ear001", "Hand", "Neck"]);
             character.traverse((child: any) => {
               if (child.isMesh) {
                 const mesh = child as THREE.Mesh;
                 if (mesh.material) {
-                  if (mesh.name === "BODY.SHIRT") {
-                    const newMat = (mesh.material as THREE.Material).clone() as THREE.MeshStandardMaterial;
-                    newMat.color = new THREE.Color("#1a1a2e");
-                    mesh.material = newMat;
+                  const cloneMat = () => (mesh.material as THREE.Material).clone() as THREE.MeshStandardMaterial;
+                  if (SKIN_MESHES.has(mesh.name)) {
+                    const m = cloneMat();
+                    m.color = new THREE.Color("#c4844a");
+                    m.roughness = 0.72;
+                    m.metalness = 0.0;
+                    mesh.material = m;
+                  } else if (mesh.name === "BODY.SHIRT") {
+                    const m = cloneMat();
+                    m.color = new THREE.Color("#1e2d40");
+                    m.roughness = 0.88;
+                    m.metalness = 0.0;
+                    mesh.material = m;
                   } else if (mesh.name === "Pant") {
-                    const newMat = (mesh.material as THREE.Material).clone() as THREE.MeshStandardMaterial;
-                    newMat.color = new THREE.Color("#0f0f0f");
-                    mesh.material = newMat;
+                    const m = cloneMat();
+                    m.color = new THREE.Color("#1a1a1a");
+                    m.roughness = 0.88;
+                    m.metalness = 0.0;
+                    mesh.material = m;
+                  } else if (mesh.name === "Hair") {
+                    const m = cloneMat();
+                    m.color = new THREE.Color("#120c08");
+                    m.roughness = 0.88;
+                    m.metalness = 0.0;
+                    mesh.material = m;
+                  } else if (mesh.name === "CAP001") {
+                    const m = cloneMat();
+                    m.color = new THREE.Color("#1e2d40");
+                    m.roughness = 0.88;
+                    mesh.material = m;
+                  } else if (mesh.name === "CAP002") {
+                    const m = cloneMat();
+                    m.color = new THREE.Color("#0d0d0d");
+                    mesh.material = m;
+                  } else if (mesh.name === "Shoe") {
+                    const m = cloneMat();
+                    m.color = new THREE.Color("#1a1a1a");
+                    m.roughness = 0.72;
+                    mesh.material = m;
+                  } else if (mesh.name === "Sole") {
+                    const m = cloneMat();
+                    m.color = new THREE.Color("#2e2e2e");
+                    mesh.material = m;
                   }
                 }
                 child.castShadow = true;
@@ -50,6 +122,8 @@ const setCharacter = (
             resolve(gltf);
             setCharTimeline(character, camera);
             setAllTimeline();
+            const headBone = character.getObjectByName("spine006");
+            if (headBone) loadGlasses(headBone, character);
             const footR = character.getObjectByName("footR");
             const footL = character.getObjectByName("footL");
             if (footR) footR.position.y = 3.36;
@@ -58,13 +132,13 @@ const setCharacter = (
           },
           undefined,
           (error) => {
-            console.error("Error loading GLTF model:", error);
+            if (import.meta.env.DEV) console.error("Error loading GLTF model:", error);
             setAllTimeline();
             reject(error);
           }
         );
       } catch (err) {
-        console.error(err);
+        if (import.meta.env.DEV) console.error(err);
         setAllTimeline();
         reject(err);
       }
