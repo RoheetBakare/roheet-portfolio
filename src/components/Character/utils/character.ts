@@ -4,40 +4,7 @@ import { setCharTimeline, setAllTimeline } from "../../utils/GsapScroll";
 import { decryptFile } from "./decrypt";
 
 
-const loadGlasses = (headBone: THREE.Object3D, character: THREE.Object3D) => {
-  if ((headBone as any).__glassesLoading) return;
-  (headBone as any).__glassesLoading = true;
 
-  const glassesLoader = new GLTFLoader();
-  const glassesDraco = new DRACOLoader();
-  glassesDraco.setDecoderPath("/draco/");
-  glassesLoader.setDRACOLoader(glassesDraco);
-
-  glassesLoader.load(
-    "/models/glasses.glb",
-    (glassesGltf) => {
-      const glasses = glassesGltf.scene;
-      const eyebrowL = character.getObjectByName("eyebrow_L");
-      const eyebrowR = character.getObjectByName("eyebrow_R");
-      if (eyebrowL && eyebrowR) {
-        const posL = new THREE.Vector3();
-        const posR = new THREE.Vector3();
-        eyebrowL.getWorldPosition(posL);
-        eyebrowR.getWorldPosition(posR);
-        const midpoint = posL.clone().add(posR).multiplyScalar(0.5);
-        midpoint.y -= 0.3;
-        headBone.worldToLocal(midpoint);
-        glasses.position.copy(midpoint);
-      }
-      glasses.scale.set(1, 1, 1);
-      glasses.rotation.set(0, 0, 0);
-      headBone.add(glasses);
-      glassesDraco.dispose();
-    },
-    undefined,
-    (error) => { if (import.meta.env.DEV) console.error("Glasses load error:", error); }
-  );
-};
 const setCharacter = (
   renderer: THREE.WebGLRenderer,
   scene: THREE.Scene,
@@ -121,8 +88,6 @@ const setCharacter = (
             resolve(gltf);
             setCharTimeline(character, camera);
             setAllTimeline();
-            const headBone = character.getObjectByName("spine006");
-            if (headBone) loadGlasses(headBone, character);
             const footR = character.getObjectByName("footR");
             const footL = character.getObjectByName("footL");
             if (footR) footR.position.y = 3.36;
