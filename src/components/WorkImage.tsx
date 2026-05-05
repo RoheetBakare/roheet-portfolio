@@ -13,11 +13,16 @@ const WorkImage = (props: Props) => {
   const [video, setVideo] = useState("");
   const handleMouseEnter = async () => {
     if (props.video) {
-      setIsVideo(true);
-      const response = await fetch(`src/assets/${props.video}`);
-      const blob = await response.blob();
-      const blobUrl = URL.createObjectURL(blob);
-      setVideo(blobUrl);
+      try {
+        const response = await fetch(`/videos/${props.video}`);
+        if (!response.ok) return;
+        const blob = await response.blob();
+        const blobUrl = URL.createObjectURL(blob);
+        setIsVideo(true);
+        setVideo(blobUrl);
+      } catch {
+        // video unavailable, stay with image
+      }
     }
   };
 

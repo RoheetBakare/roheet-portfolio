@@ -18,6 +18,8 @@ const SocialIcons = () => {
       let currentX = 0;
       let currentY = 0;
 
+      let rafId: number;
+
       const updatePosition = () => {
         currentX += (mouseX - currentX) * 0.1;
         currentY += (mouseY - currentY) * 0.1;
@@ -25,7 +27,7 @@ const SocialIcons = () => {
         link.style.setProperty("--siLeft", `${currentX}px`);
         link.style.setProperty("--siTop", `${currentY}px`);
 
-        requestAnimationFrame(updatePosition);
+        rafId = requestAnimationFrame(updatePosition);
       };
 
       const onMouseMove = (e: MouseEvent) => {
@@ -43,10 +45,11 @@ const SocialIcons = () => {
 
       document.addEventListener("mousemove", onMouseMove);
 
-      updatePosition();
+      rafId = requestAnimationFrame(updatePosition);
 
       return () => {
-        elem.removeEventListener("mousemove", onMouseMove);
+        cancelAnimationFrame(rafId);
+        document.removeEventListener("mousemove", onMouseMove);
       };
     });
   }, []);
