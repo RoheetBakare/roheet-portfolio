@@ -75,7 +75,7 @@ const Work = () => {
           My <span>Work</span>
         </h2>
 
-        <div className="carousel-wrapper">
+        <section className="carousel-wrapper" role="region" aria-label="Project portfolio carousel" aria-roledescription="carousel">
           {/* Navigation Arrows */}
           <button
             className="carousel-arrow carousel-arrow-left"
@@ -103,7 +103,12 @@ const Work = () => {
               }}
             >
               {projects.map((project, index) => (
-                <div className="carousel-slide" key={index}>
+                <div
+                  className="carousel-slide"
+                  key={index}
+                  aria-hidden={index !== currentIndex}
+                  {...(index !== currentIndex ? { inert: "inert" as any } : {})}
+                >
                   <div className="carousel-content">
                     <div className="carousel-info">
                       <div className="carousel-number">
@@ -135,7 +140,7 @@ const Work = () => {
           </div>
 
           {/* Dot Indicators */}
-          <div className="carousel-dots">
+          <div role="tablist" aria-label="Project slides" className="carousel-dots">
             {projects.map((_, index) => (
               <button
                 key={index}
@@ -147,7 +152,7 @@ const Work = () => {
               />
             ))}
           </div>
-        </div>
+        </section>
       </div>
     </div>
   );

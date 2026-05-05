@@ -60,7 +60,7 @@ const SkillsMarquee = () => {
         <p className="skills-subtitle">7+ years across the full ML lifecycle</p>
       </div>
 
-      <div className="skills-rows">
+      <div className="skills-rows" aria-hidden="true">
         <div className="skills-row">
           <Marquee speed={30} gradient gradientColor="#080c14" gradientWidth={80} pauseOnHover>
             {row1.map((s) => <SkillPill key={s.name} skill={s} />)}
