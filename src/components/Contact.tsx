@@ -23,6 +23,7 @@ const Contact = () => {
                 target="_blank"
                 rel="noreferrer"
                 data-cursor="disable"
+                aria-label="LinkedIn profile (connect section)"
               >
                 linkedin.com/in/roheetbakare
               </a>
@@ -33,6 +34,7 @@ const Contact = () => {
                 target="_blank"
                 rel="noreferrer"
                 data-cursor="disable"
+                aria-label="GitHub profile (connect section)"
               >
                 github.com/roheetbakare
               </a>
@@ -54,6 +56,7 @@ const Contact = () => {
               rel="noreferrer"
               data-cursor="disable"
               className="contact-social"
+              aria-label="GitHub profile"
             >
               GitHub <MdArrowOutward />
             </a>
@@ -63,6 +66,7 @@ const Contact = () => {
               rel="noreferrer"
               data-cursor="disable"
               className="contact-social"
+              aria-label="LinkedIn profile"
             >
               LinkedIn <MdArrowOutward />
             </a>
