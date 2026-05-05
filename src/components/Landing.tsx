@@ -1,5 +1,6 @@
 import { PropsWithChildren } from "react";
 import "./styles/Landing.css";
+import { smoother } from "./Navbar";
 
 const Landing = ({ children }: PropsWithChildren) => {
   return (
@@ -30,7 +31,11 @@ const Landing = ({ children }: PropsWithChildren) => {
               data-cursor="disable"
               onClick={(e) => {
                 e.preventDefault();
-                document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+                if (smoother) {
+                  smoother.scrollTo("#contact", true, "top top");
+                } else {
+                  document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+                }
               }}
             >
               Get in Touch

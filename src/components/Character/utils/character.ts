@@ -38,7 +38,7 @@ const setCharacter = (
                   const cloneMat = () => (mesh.material as THREE.Material).clone() as THREE.MeshStandardMaterial;
                   if (SKIN_MESHES.has(mesh.name)) {
                     const m = cloneMat();
-                    m.color = new THREE.Color("#c4844a");
+                    m.color = new THREE.Color("#d4a07a");
                     m.roughness = 0.72;
                     m.metalness = 0.0;
                     mesh.material = m;
