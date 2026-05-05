@@ -30,3 +30,4 @@ backup/
 .vercel
 .gstack/
 .gstack-design-review/
+.worktrees

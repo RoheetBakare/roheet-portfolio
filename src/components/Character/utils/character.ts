@@ -3,6 +3,7 @@ import { DRACOLoader, GLTF, GLTFLoader } from "three-stdlib";
 import { setCharTimeline, setAllTimeline } from "../../utils/GsapScroll";
 import { decryptFile } from "./decrypt";
 
+
 const setCharacter = (
   renderer: THREE.WebGLRenderer,
   scene: THREE.Scene,
@@ -28,18 +29,54 @@ const setCharacter = (
           async (gltf) => {
             character = gltf.scene;
             await renderer.compileAsync(character, camera, scene);
+            const SKIN_MESHES = new Set(["Face002", "Ear001", "Hand", "Neck"]);
             character.traverse((child: any) => {
               if (child.isMesh) {
                 const mesh = child as THREE.Mesh;
                 if (mesh.material) {
-                  if (mesh.name === "BODY.SHIRT") {
-                    const newMat = (mesh.material as THREE.Material).clone() as THREE.MeshStandardMaterial;
-                    newMat.color = new THREE.Color("#1a1a2e");
-                    mesh.material = newMat;
+                  const cloneMat = () => (mesh.material as THREE.Material).clone() as THREE.MeshStandardMaterial;
+                  if (SKIN_MESHES.has(mesh.name)) {
+                    const m = cloneMat();
+                    m.color = new THREE.Color("#c4844a");
+                    m.roughness = 0.72;
+                    m.metalness = 0.0;
+                    mesh.material = m;
+                  } else if (mesh.name === "BODY.SHIRT") {
+                    const m = cloneMat();
+                    m.color = new THREE.Color("#1e2d40");
+                    m.roughness = 0.88;
+                    m.metalness = 0.0;
+                    mesh.material = m;
                   } else if (mesh.name === "Pant") {
-                    const newMat = (mesh.material as THREE.Material).clone() as THREE.MeshStandardMaterial;
-                    newMat.color = new THREE.Color("#0f0f0f");
-                    mesh.material = newMat;
+                    const m = cloneMat();
+                    m.color = new THREE.Color("#1a1a1a");
+                    m.roughness = 0.88;
+                    m.metalness = 0.0;
+                    mesh.material = m;
+                  } else if (mesh.name === "Hair") {
+                    const m = cloneMat();
+                    m.color = new THREE.Color("#120c08");
+                    m.roughness = 0.88;
+                    m.metalness = 0.0;
+                    mesh.material = m;
+                  } else if (mesh.name === "CAP001") {
+                    const m = cloneMat();
+                    m.color = new THREE.Color("#1e2d40");
+                    m.roughness = 0.88;
+                    mesh.material = m;
+                  } else if (mesh.name === "CAP002") {
+                    const m = cloneMat();
+                    m.color = new THREE.Color("#0d0d0d");
+                    mesh.material = m;
+                  } else if (mesh.name === "Shoe") {
+                    const m = cloneMat();
+                    m.color = new THREE.Color("#1a1a1a");
+                    m.roughness = 0.72;
+                    mesh.material = m;
+                  } else if (mesh.name === "Sole") {
+                    const m = cloneMat();
+                    m.color = new THREE.Color("#2e2e2e");
+                    mesh.material = m;
                   }
                 }
                 child.castShadow = true;
