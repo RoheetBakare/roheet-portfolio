@@ -2,6 +2,7 @@ import { lazy, Suspense, useCallback } from "react";
 import "./App.css";
 import { LoadingProvider, useLoading } from "./context/LoadingProvider";
 import CharacterErrorBoundary from "./components/CharacterErrorBoundary";
+import { Analytics } from "@vercel/analytics/react";
 
 const CharacterModel = lazy(() => import("./components/Character"));
 const MainContainer = lazy(() => import("./components/MainContainer"));
@@ -33,6 +34,7 @@ const App = () => {
   return (
     <LoadingProvider>
       <AppInner />
+      <Analytics />
     </LoadingProvider>
   );
 };
