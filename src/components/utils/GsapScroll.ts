@@ -6,7 +6,7 @@ export function setCharTimeline(
   camera: THREE.PerspectiveCamera
 ) {
   let intensity: number = 0;
-  setInterval(() => {
+  const intensityInterval = setInterval(() => {
     intensity = Math.random();
   }, 200);
   const tl1 = gsap.timeline({
@@ -16,6 +16,7 @@ export function setCharTimeline(
       end: "bottom top",
       scrub: true,
       invalidateOnRefresh: true,
+      onLeaveBack: () => clearInterval(intensityInterval),
     },
   });
   const tl2 = gsap.timeline({

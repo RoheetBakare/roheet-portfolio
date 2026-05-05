@@ -1,12 +1,14 @@
 import { PropsWithChildren, useEffect, useState } from "react";
 import About from "./About";
 import Career from "./Career";
+import CharacterErrorBoundary from "./CharacterErrorBoundary";
 import Contact from "./Contact";
 import Cursor from "./Cursor";
 import Landing from "./Landing";
 import Navbar from "./Navbar";
 import SkillsMarquee from "./SkillsMarquee";
 import SocialIcons from "./SocialIcons";
+import TechStack from "./TechStack";
 import WhatIDo from "./WhatIDo";
 import Work from "./Work";
 import setSplitText from "./utils/splitText";
@@ -42,6 +44,9 @@ const MainContainer = ({ children }: PropsWithChildren) => {
             <WhatIDo />
             <Career />
             <Work />
+            <CharacterErrorBoundary onError={() => {}}>
+              <TechStack />
+            </CharacterErrorBoundary>
             <SkillsMarquee />
             <Contact />
           </div>
