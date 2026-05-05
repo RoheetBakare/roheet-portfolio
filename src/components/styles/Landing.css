@@ -395,3 +395,70 @@ h2.landing-info-h2 {
     font-size: 75px;
   }
 }
+
+.landing-greeting {
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-bottom: 0.25rem;
+}
+
+.landing-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  padding: 0.75rem 1.75rem;
+  border: 1px solid var(--accentColor);
+  color: var(--accentColor);
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.25s, color 0.25s;
+}
+
+.landing-cta:hover {
+  background: var(--accentColor);
+  color: #0a0e17;
+}
+
+.landing-scroll-indicator {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0.4;
+  animation: scrollBounce 2s ease-in-out infinite;
+}
+
+.landing-scroll-line {
+  width: 1px;
+  height: 3rem;
+  background: var(--accentColor);
+  animation: scrollGrow 2s ease-in-out infinite;
+  transform-origin: top;
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(6px); }
+}
+
+@keyframes scrollGrow {
+  0% { transform: scaleY(0); opacity: 0; }
+  50% { transform: scaleY(1); opacity: 1; }
+  100% { transform: scaleY(0.3); opacity: 0.3; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landing-scroll-indicator,
+  .landing-scroll-line {
+    animation: none;
+  }
+}

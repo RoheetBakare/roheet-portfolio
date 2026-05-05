@@ -11,7 +11,7 @@ const projects = [
     description:
       "Unified CRM, paid media, and web analytics into a single warehouse using dbt models and Airflow-orchestrated pipelines. Delivered automated exec dashboards that gave marketing and sales one consistent source of truth for revenue and pipeline decisions.",
     image: "/images/gtm-analytics.svg",
-    link: "#",
+    link: "https://github.com/RoheetBakare",
   },
   {
     title: "Parking Analytics",
@@ -20,7 +20,7 @@ const projects = [
     description:
       "Analyzed 2.88M parking transactions across 4 years of Iowa lot data. Built SARIMA models to forecast weekly demand, identified high-traffic dates via 90th-percentile thresholds, and delivered three interactive Dash dashboards for facility planning teams.",
     image: "/images/parking-analytics.svg",
-    link: "#",
+    link: "https://github.com/RoheetBakare",
   },
   {
     title: "Disease Predictor",
@@ -29,7 +29,7 @@ const projects = [
     description:
       "Fine-tuned BioBERT for multi-label clinical risk classification on de-identified patient notes, with a Random Forest ensemble for structured EHR features. Integrated with a live EHR API to surface risk scores at point of care.",
     image: "/images/disease-predictor.svg",
-    link: "#",
+    link: "https://github.com/RoheetBakare",
   },
   {
     title: "YouTube Summarizer",
@@ -38,7 +38,7 @@ const projects = [
     description:
       "Transcript extraction and summarization pipeline using LangChain for semantic chunking and OpenAI for generation. Handles long-form content by splitting into context-aware segments; deployed as a Streamlit app for on-demand use.",
     image: "/images/yt-summarizer.svg",
-    link: "#",
+    link: "https://github.com/RoheetBakare",
   },
 ];
 

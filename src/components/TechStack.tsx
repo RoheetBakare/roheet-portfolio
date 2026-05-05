@@ -155,8 +155,6 @@ const TechStack = () => {
 
   return (
     <div className="techstack">
-      <h2>My Tech Stack</h2>
-
       <Canvas
         shadows
         gl={{ alpha: true, stencil: false, depth: false, antialias: false }}
