@@ -1,0 +1,16 @@
+{
+  "name": "Roheet Bakare — Data Scientist & ML Engineer",
+  "short_name": "Roheet Bakare",
+  "description": "Portfolio of Roheet Bakare, Senior Data Scientist and ML Engineer",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0e17",
+  "theme_color": "#0a0e17",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
